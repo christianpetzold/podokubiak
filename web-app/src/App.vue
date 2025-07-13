@@ -49,7 +49,7 @@
       ></v-card>
     </v-navigation-drawer>
     <v-main>
-      <v-container class="pa-12 pt-6" max-width="1000px">
+      <v-container class="pa-6 pt-6" max-width="1000px">
         <router-view
           @update-sections="currentSections = $event"
           @update-active-section="handleActiveSectionUpdate"
