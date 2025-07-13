@@ -2,67 +2,58 @@
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 import Vue from '@vitejs/plugin-vue'
-import Vuetify, {transformAssetUrls} from 'vite-plugin-vuetify'
-import {defineConfig} from 'vite'
-import path from 'path';
-import { fileURLToPath } from 'url';
+import Vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
+import { defineConfig } from 'vite'
+import path from 'path'
+import { fileURLToPath } from 'url'
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
 
-export default defineConfig(({command}) =>({
+export default defineConfig(({ command }) => ({
+  base: command === 'build' ? '/podokubiak/' : '/',
   plugins: [
     AutoImport({
-      imports: [
-        'vue',
-      ],
+      imports: ['vue'],
       dts: 'src/auto-imports.d.ts',
       eslintrc: {
-        enabled: true,
+        enabled: true
       },
-      vueTemplate: true,
+      vueTemplate: true
     }),
     Components({
-      dts: 'src/components.d.ts',
+      dts: 'src/components.d.ts'
     }),
     Vue({
-      template: {transformAssetUrls},
+      template: { transformAssetUrls }
     }),
     Vuetify({
       autoImport: true,
       styles: {
-        configFile: 'src/styles/settings.scss',
-      },
-    }),
+        configFile: 'src/styles/settings.scss'
+      }
+    })
   ],
   optimizeDeps: {
-    exclude: [
-      'vuetify',
-    ],
+    exclude: ['vuetify']
   },
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, './src'),
+      '@': path.resolve(__dirname, './src')
     },
-    extensions: [
-      '.js',
-      '.json',
-      '.mjs',
-      '.ts',
-      '.vue',
-    ],
+    extensions: ['.js', '.json', '.mjs', '.ts', '.vue']
   },
   server: {
-    port: 3000,
+    port: 3000
   },
   css: {
     preprocessorOptions: {
       sass: {
-        api: 'modern-compiler',
+        api: 'modern-compiler'
       },
       scss: {
-        api: 'modern-compiler',
-      },
-    },
-  },
+        api: 'modern-compiler'
+      }
+    }
+  }
 }))

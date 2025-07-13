@@ -1,7 +1,7 @@
 <template>
   <div class="mt-4" style="position: relative">
     <v-parallax
-      class="rounded-te-pill"
+      class="rounded-xl"
       :src="image1"
       style="
         opacity: 10%;
@@ -25,14 +25,13 @@
               :src="logo"
               class="rounded-circle"
               alt="Logo der Praxis Podologie Kubiak"
-              color="logoBackground"
             />
             <h2>Podologie Kubiak Essen</h2>
             <v-btn
               width="200"
               class="mt-4"
               color="primary"
-              href="tel:+0201763176"
+              href="tel:0201763176"
               aria-label="Jetzt anrufen: 0201 763176"
             >
               <v-icon class="mr-2">
@@ -94,7 +93,7 @@
 </template>
 
 <script setup lang="ts">
-import logo from '@/assets/images/logo/main-logo.svg'
+import logo from '@/assets/images/logo/main-logo-alt.svg'
 import image1 from '@/assets/images/carousel/image1.jpeg'
 import MiniIconSheet from '@/components/MiniIconSheet.vue'
 import ListDivider from '@/components/ListDivider.vue'

@@ -6,7 +6,7 @@
 
     <section id="section2">
       <h2>Section 2</h2>
-      <p>Lorem ipsum dolo sit amet, consectetur adipiscing elit. In sem felis, egestas id varius vitae, faucibus
+      <p>Lorem ipsum dolo amet, consectetur adipiscing elit. In sem felis, egestas id varius vitae, faucibus
         sagittis ipsum. Cras aliquam pellentesque sollicitudin. In viverra, urna et condimentum ultrices, nibh libero
         dictum velit, a imperdiet orci nibh et libero. Phasellus fringilla malesuada pretium. Aliquam at pretium odio,
         in lacinia augue. Nunc rutrum ut nibh ac accumsan. Aenean sed urna metus. Lorem ipsum dolor sit amet,

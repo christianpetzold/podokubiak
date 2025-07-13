@@ -20,8 +20,8 @@ const mainTheme = {
   dark: false,
   colors: {
     kubiakMint: kubiakColors.mint,
-    logoBackground: kubiakColors.slate,
-    miniIconBackground: kubiakColors.mintBright,
+    logoBackground: kubiakColors.whiteDark,
+    tertiary: kubiakColors.mintBright,
     primary: kubiakColors.mint,
     secondary: kubiakColors.slate,
     accent: '#82B1FF',

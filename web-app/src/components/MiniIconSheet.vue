@@ -3,7 +3,7 @@
     class="mr-6 d-flex justify-center align-center rounded-circle"
     width="35"
     height="35"
-    color="miniIconBackground"
+    color="tertiary"
   >
     <v-icon>
       {{ icon }}

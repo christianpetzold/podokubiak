@@ -7,8 +7,10 @@ const routes = [
   { path: '/about', name: 'About', component: About },
 ]
 
+const base = import.meta.env.MODE === 'production' ? '/podokubiak/' : '/'
+
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory(base),
   routes,
 })
 
