@@ -1,10 +1,10 @@
 <template>
-  <div class="mt-4" style="position: relative">
+  <div style="position: relative">
     <v-parallax
       class="rounded-xl"
       :src="image1"
       style="
-        opacity: 10%;
+        opacity: 15%;
         width: 100%;
         height: 100%;
         position: absolute;
@@ -13,7 +13,7 @@
     />
     <v-container class="pa-0 mb-8" bg-color="transparent">
       <v-row>
-        <v-col cols="12" sm="6" class="mt-6 pa-0">
+        <v-col cols="12" sm="6" class="pa-0">
           <v-card
             class="d-flex flex-column align-center"
             color="transparent"
@@ -42,9 +42,9 @@
           </v-card>
         </v-col>
         <v-col cols="12" v-if="xs">
-          <v-divider class="mt-12"/>
+          <v-divider class="mt-4"/>
         </v-col>
-        <v-col cols="12" sm="6" class="mt-6 pa-0">
+        <v-col cols="12" sm="6" class="pa-0">
           <v-list :class=" xs ? 'mx-auto' : ''" max-width="300" density="compact" bg-color="transparent">
             <v-list-subheader>Telefon</v-list-subheader>
             <v-list-item
