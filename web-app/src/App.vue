@@ -1,5 +1,5 @@
 <template>
-  <FullScreenLoader :visible="loading"/>
+  <FullScreenLoader :visible="loading" />
   <v-app>
     <v-app-bar
       app
@@ -46,7 +46,7 @@
         @click="scrollTo(section.id)"
         :prepend-icon="section.icon"
         :title="section.label"
-      ></v-card>
+      />
     </v-navigation-drawer>
     <v-main>
       <v-container class="pa-6 pt-6" max-width="1000px">
@@ -57,10 +57,7 @@
       </v-container>
     </v-main>
     <div class="fab-container">
-      <v-speed-dial
-        location="bottom center"
-        transition="fade-transition"
-      >
+      <v-speed-dial location="bottom center" transition="fade-transition">
         <template v-slot:activator="{ props: activatorProps }">
           <v-fab
             v-bind="activatorProps"
@@ -83,18 +80,21 @@
       <v-divider class="my-2" thickness="2" width="50"></v-divider>
 
       <div>
-        {{ new Date().getFullYear() }} — Made by <a style="color: white" href="https://www.christianpetzold.dev">Christian Petzold</a>
+        {{ new Date().getFullYear() }} — Made by
+        <a style="color: white" href="https://www.christianpetzold.dev"
+          >Christian Petzold</a
+        >
       </div>
     </v-footer>
   </v-app>
 </template>
 
 <script lang="ts" setup>
-import {useScrollRestore} from "@/composables/useScrollRestore.ts";
-import router from "@/router";
+import { useScrollRestore } from '@/composables/useScrollRestore.ts'
+import router from '@/router'
 
 useScrollRestore()
-const loading = ref(true);
+const loading = ref(true)
 
 onMounted(() => {
   requestAnimationFrame(() => {
@@ -105,12 +105,12 @@ onMounted(() => {
 })
 
 type Section = {
-  id: string,
-  icon: string,
-  label: string,
+  id: string
+  icon: string
+  label: string
 }
 
-const drawer = ref(false);
+const drawer = ref(false)
 const currentSections = ref<Section[]>([])
 const activeSectionId = ref('')
 
@@ -121,14 +121,13 @@ function handleActiveSectionUpdate(id: string) {
 function scrollTo(id: string) {
   const el = document.getElementById(id)
   if (el) {
-    el.scrollIntoView({behavior: 'smooth'})
+    el.scrollIntoView({ behavior: 'smooth' })
   }
-  drawer.value = false;
+  drawer.value = false
 }
 </script>
 
 <style>
-
 html {
   scroll-padding-top: 80px; /* or whatever your app-bar height is */
 }
