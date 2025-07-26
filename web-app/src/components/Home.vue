@@ -76,7 +76,7 @@
             <v-list-subheader>Adresse</v-list-subheader>
 
             <v-list-item
-              v-for="item in adressList"
+              v-for="item in addressList"
               :key="item.value"
               :title="item.title"
               :subtitle="item.subtitle"
@@ -131,7 +131,7 @@ const openingHoursList = [
   }
 ]
 
-const adressList = [
+const addressList = [
   {
     title: 'Giesebrechtstraße 65 ',
     subtitle: '45144 Frohnhausen',
